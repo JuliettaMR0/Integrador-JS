@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --color-navbar: #fcf5ed;
+  --bg-primario: #f4bf96;
+  --bg-secundario: #ce5a67;
+  --bg-terciario: #1f1717;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--color-navbar);
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  padding: 100px 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 120px;
+  width: 150px;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #333128;
+  display: block;
+  font-weight: 600;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(10);
+  top: 100%;
+  z-index: 1;
+  background-color: rgb(44, 49, 49);
+  padding: 20px;
+  min-width: 400px;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  color: #ffff;
+}
+
+.borrar {
+  background-color: grey;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: aliceblue;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.header-content {
+  display: flex;
+}
+
+.header-txt {
+  flex-basis: 50%;
+}
+
+.header-text h1 {
+  font-size: 55px;
+  line-height: 1;
+  color: #1f1717;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+  color: #1f1717;
+  margin-bottom: 45px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 13px 25px;
+  color: #1f1717;
+  border-radius: 25px;
+  background-color: var(--bg-secundario);
+  text-transform: capitalize;
+}
+
+.header-img {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.header-img img {
+  width: 400px;
+}
+
+.information {
+  width: 70%;
+  box-shadow: 0 0 20px rgb(0, 0, 0.1);
+  padding: 25px 75px;
+  margin-top: -75px;
+  background-color: var(--bg-secundario);
+}
+
+.information-content {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.information-1 img {
+  width: 35px;
+}
+
+h3 {
+  font-size: 17px;
+  color: #181713;
+}
+
+.information-1 p {
+  margin-bottom: 0;
+}
+
+.oferts {
+  padding: 100px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ofert-1 {
+  text-align: center;
+  flex-basis: calc(25%- 20px);
+  box-shadow: 0 0 20px rgb(0, 0, 0.1);
+  padding: 35px;
+}
+
+.ofert-1 img {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.ofert-1 p {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600px;
+  color: rgb(25, 27, 27);
+}
+
+#lista-1 {
+  background-color: var(--bg-primario);
+  border-radius: 20px;
+  margin-bottom: 80px;
+}
+
+.products {
+  padding: 0 0 100px 0;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 40px;
+  color: #181713;
+  padding-top: 25px;
+  margin-bottom: 55px;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.product {
+  text-align: center;
+  padding: 35px;
+}
+
+.product img {
+  width: 170px;
+  height: 180px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.product h3 {
+  color: #181713;
+}
+
+.product p {
+  font-size: 15px;
+  margin: 0;
+  color: #181713;
+  font-weight: 600;
+}
+
+.btn-2 {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 7px 25px;
+  border-radius: 5px;
+  color: #e9e4e5;
+  background-color: rgb(10, 10, 10);
+}
+
+/* Parte donde iria un carruzel de imagenes */
+
+.service {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-1 {
+  flex-basis: 30%;
+  padding: 25px;
+  background-color: rgb(117, 13, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store {
+  width: 300px;
+  height: 250px;
+}
+
+.service-2 {
+  flex-basis: 40%;
+  padding: 25px;
+  background-color: rgb(12, 63, 23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-3 {
+  flex-basis: 30%;
+  padding: 25px;
+  background-color: #211b75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-4 {
+  flex-basis: 30%;
+  padding: 25px;
+  background-color: #f4bf96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parte donde termina el carruzel de imagenes */
+
+#contact1 {
+  background-color: var(--color-navbar);
+  padding: 20px 670px;
+}
+
+.contact {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 17px 25px;
+  border-radius: 25px;
+  border: 1px solid rgb(42, 46, 46);
+  outline: none;
+}
+
+.btn-3 {
+  margin-left: 10px;
+  color: aliceblue;
+  background-color: var(--bg-secundario);
+}
+
+.footer {
+  padding: 50px 0;
+  background-color: var(--bg-terciario);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link h3 {
+  color: aliceblue;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.link a {
+  color: #fcf5ed;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,100 @@
+@media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+
+  .menu label {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f4bf96;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu .navbar {
+    color: aliceblue;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .submenu:hover #carrito {
+    min-width: 340px;
+  }
+
+  .header {
+    min-height: 0vh;
+
+    padding: 100px 30px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-txt {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .header-img img {
+    width: 300px;
+  }
+
+  /* ACA TERMINA TODO EL NAV Y EL HEADER */
+
+  /* EMPIZA LA PARTE DE INFO O HERO */
+
+  .information {
+    display: none;
+  }
+
+  .oferts {
+    padding: 30px;
+    flex-direction: column;
+  }
+
+  .ofert-1 {
+    margin-bottom: 25px;
+  }
+
+  /* EMPIEZA LA PARTE PRODUCTOS (acordarme de revisar las clases) */
+
+  .products {
+    padding: 30px;
+  }
+
+  .products-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Empiza lo del carrusel de imagenes (comprobar que anda en js, no olvidarme) */
+  .service {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
