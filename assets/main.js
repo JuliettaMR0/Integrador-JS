@@ -118,20 +118,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //Fin js contact
-
-//imagen del header
-
-function cambiarBorderRadius() {
-  const imagen = document.getElementById("header-img").querySelector("img");
-  const borderRadiusActual = parseInt(
-    window.getComputedStyle(imagen).borderRadius
-  );
-  const nuevoBorderRadius = borderRadiusActual === 20 ? 0 : 20;
-
-  imagen.style.borderRadius = nuevoBorderRadius + "px";
-}
-
-// Asigna el evento click al elemento con el ID "header-img"
-document
-  .getElementById("header-img")
-  .addEventListener("click", cambiarBorderRadius);

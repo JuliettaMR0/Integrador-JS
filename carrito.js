@@ -58,7 +58,7 @@ function insertarCarrito(elemento) {
   carritoLocalStorage.push(elemento);
   guardarCarritoEnLocalStorage(carritoLocalStorage);
 
-  // Después de añadir un elemento al carrito
+  // Después del a;adir
   const carritoActual = obtenerCarritoDesdeLocalStorage();
   console.log("Carrito recuperado desde localStorage:", carritoActual);
 }
@@ -78,7 +78,6 @@ function eliminarElemento(e) {
     );
     guardarCarritoEnLocalStorage(carritoActualizado);
 
-    // Después de realizar cambios en el carrito
     console.log("Carrito actualizado en localStorage:", carritoActualizado);
   }
 }
