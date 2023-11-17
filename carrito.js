@@ -1,3 +1,9 @@
+// Importar funciones de data.js
+import {
+  obtenerCarritoDesdeLocalStorage,
+  guardarCarritoEnLocalStorage,
+} from "./assets/data.js";
+
 const carrito = document.getElementById("carrito");
 const elementos1 = document.getElementById("lista-1");
 const lista = document.querySelector("#lista-carrito tbody");
@@ -46,6 +52,15 @@ function insertarCarrito(elemento) {
         </td>
     `;
   lista.appendChild(row);
+
+  // Actualizar el carrito en localStorage
+  const carritoLocalStorage = obtenerCarritoDesdeLocalStorage();
+  carritoLocalStorage.push(elemento);
+  guardarCarritoEnLocalStorage(carritoLocalStorage);
+
+  // Después de añadir un elemento al carrito
+  const carritoActual = obtenerCarritoDesdeLocalStorage();
+  console.log("Carrito recuperado desde localStorage:", carritoActual);
 }
 
 function eliminarElemento(e) {
@@ -55,6 +70,16 @@ function eliminarElemento(e) {
     e.target.parentElement.parentElement.remove();
     elemento = e.target.parentElement.parentElement;
     elementoId = e.target.getAttribute("data-id");
+
+    // Actualizar el carrito en localStorage después de eliminar un elemento
+    const carritoLocalStorage = obtenerCarritoDesdeLocalStorage();
+    const carritoActualizado = carritoLocalStorage.filter(
+      (item) => item.id !== elementoId
+    );
+    guardarCarritoEnLocalStorage(carritoActualizado);
+
+    // Después de realizar cambios en el carrito
+    console.log("Carrito actualizado en localStorage:", carritoActualizado);
   }
 }
 
@@ -62,6 +87,9 @@ function vaciarCarrito() {
   while (lista.firstChild) {
     lista.removeChild(lista.firstChild);
   }
+
+  // Vaciar el carrito en localStorage
+  guardarCarritoEnLocalStorage([]);
   return false;
 }
 

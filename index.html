@@ -21,7 +21,7 @@
         </label>
         <nav class="navbar">
           <ul>
-            <li><a href="">Inicio</a></li>
+            <li><a href="#img-carrito">Inicio</a></li>
             <li><a href="">Beneficios</a></li>
             <li><a href="">Productos</a></li>
             <li><a href="">Contacto</a></li>
@@ -60,7 +60,7 @@
           <a href="#" class="btn-1">Informacion</a>
         </div>
 
-        <div class="header-img">
+        <div class="header-img" id="header-img">
           <img src="/ImagenesLogo/hogs.jpg" alt="hogs" />
         </div>
       </div>
@@ -117,81 +117,14 @@
 
         <main class="products container" id="lista-1">
           <h2>Productos Destacados</h2>
-          <div class="product-content">
-
-            <div class="product">
-              <img src="/assets/imagenes productos/ACCbolso934.webp" alt="">
-              <div class="product-txt">
-                <h3>Bolso 9/34</h3>
-                <p class="precio">$15.000</p>
-                <a href="" class="agregar-carrito btn-2" data-id="1">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/ACCcollarSly.webp" alt="">
-              <div class="product-txt">
-                <h3>Collar Slytherin</h3>
-                <p class="precio">$3.500</p>
-                <a href="" class="agregar-carrito btn-2" data-id="2">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/JUfunkopotter.webp" alt="">
-              <div class="product-txt">
-                <h3>Funko: Harry Potter</h3>
-                <p class="precio">$6.750</p>
-                <a href="" class="agregar-carrito btn-2" data-id="3">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/JUazucarera.webp" alt="">
-              <div class="product-txt">
-                <h3>Azucarera Hedwing</h3>
-                <p class="precio">$3.450</p>
-                <a href="" class="agregar-carrito btn-2" data-id="4">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/JUhermione,funko.webp" alt="">
-              <div class="product-txt">
-                <h3>Funko: Hermione</h3>
-                <p class="precio">$6.750</p>
-                <a href="" class="agregar-carrito btn-2" data-id="5">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/JUvasoSly.webp" alt="">
-              <div class="product-txt">
-                <h3>Vaso Slytherin</h3>
-                <p class="precio">$3.000</p>
-                <a href="" class="agregar-carrito btn-2" data-id="6">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/ROPAbuzoRav.webp" alt="">
-              <div class="product-txt">
-                <h3>Buzo Ravenclaw</h3>
-                <p class="precio">$14.000</p>
-                <a href="" class="agregar-carrito btn-2" data-id="7">Agregar</a>
-              </div>
-            </div>
-
-            <div class="product">
-              <img src="/assets/imagenes productos/ROPAcamisasly.webp" alt="">
-              <div class="product-txt">
-                <h3>Camisa Sly</h3>
-                <p class="precio">$10.000</p>
-                <a href="" class="agregar-carrito btn-2" data-id="8">Agregar</a>
-              </div>
-            </div>
-
+          <div class="filter-buttons">
+            <button data-category="todos" class="filter-btn active">Todos</button>
+            <button data-category="accesorios" class="filter-btn">Accesorios</button>
+            <button data-category="juguetes" class="filter-btn">Juguetes</button>
+            <button data-category="ropa" class="filter-btn">Ropa</button>
           </div>
+          <div class="product-content" id="productos-container"></div>
+          
         </main>
 
         <section class="service">
@@ -212,11 +145,11 @@
 
         <section id="contact1" class="contact container">
 
-          <form >
+          <form id="contactForm">
             <input type="email" placeholder="correo">
             <input type="submit" class="btn-3">
           </form>
-          
+          <div id="mensaje-envio" style="display: none;">¡Correo Recibido!</div>
 
         </section>
 
@@ -240,6 +173,8 @@
         </footer>
 
 
-    <script src="/script.js"></script>
+    <script  type="module" src="/carrito.js"></script>
+    <script  src="/assets/main.js"></script>
+    <script type="module" src="/assets/data.js"></script>
   </body>
 </html>
